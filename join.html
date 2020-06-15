@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        if(window.localStorage){
+          console.log("이 브라우져는 WebStorage를 사용할 수 있습니다.");
+        }
+        else {
+          console.log("이 브라우져는 WebStorage를 사용할 수 없습니다.");
+        }
+    </script>
+    <style>
+    body{
+        width: 960px;
+        background: rgb(214, 236, 221);
+        font: 15px, 'Nanum Gothic Coding', monospace;
+        padding: 10px auto;
+    }
+    #btn1, #btn2{
+        position: absolute;
+        left: 300px;
+        width: 120px;
+        height: 35px;
+        padding: 10px 10px;
+        margin: 10px auto;
+        
+    }
+    input{
+        width: 200px;
+        height: 30px;
+        padding: 6px;
+    }
+
+</style>
+</head>
+<body>
+    <h2>회원가입</h2>
+  <input type="email" id="email" placeholder="april27thmon@gmail.com">
+  <input type="password" id="password" placeholder="비밀번호">
+  <br><br>
+  <input type="button" value="회원가입" id="btn1">
+  <script>
+      
+  $("#btn1").click(function(){
+    let k = $("#email").val();
+    let v = $("#password").val();
+
+    if(k == '' || v == ''){
+      alert("입력값이 없습니다.");
+      return;
+    }
+
+    localStorage.setItem(k, v);
+
+    $("#email, #password").val("");
+  });
+  
+  </script>
+    <br><br>
+   <h2>비밀번호 찾기</h2>
+   <input type="text" id="key2" placeholder="EMAIL">
+   <input type="button" value="이메일로 조회" id="btn2">
+   <script>
+   $("#btn2").click(function(){
+     let k = $("#key2").val();
+     let v = localStorage.getItem(k);
+ 
+     if(v != null)
+       alert("비밀번호는"+v+"입니다.");
+     else 
+       alert("존재하지 않은 회원입니다.");
+ 
+   });
+   
+   
+   </script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEE EUN-HO</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic+Coding&display=swap');
+       .pic{
+        align-items: left;
+        width: 400px;
+       }
+       #comment{
+        text-align: justify;
+        font: 13px 'Nanum Gothic Coding' gray;
+       }
+       
+       body{
+            background-color: rgb(1, 155, 219);
+        }
+        #container{
+            width: 960px;
+            padding: 10px;
+            margin: 0 auto;
+            float: left;
+        }
+
+        .logo{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding: 15px;
+            
+        }
+        .logo>ul{
+            position: relative;
+            font: bold 30px Black Han Sans;
+            float: right;
+        }
+        
+        #menu2{
+            border: none;
+            transition-property: all;
+            transition-timing-function: linear;
+        }
+
+        #menu2:hover{
+            border: dotted 3px rgb(78, 78, 65);  
+            border-radius: 50%  
+        }
+        
+        #login{
+        
+            width: 330px;
+            height: 80px;
+            margin: 10px;
+            right: 200px;
+            top: 100px;
+            position: absolute;
+            padding: 12px;
+            font-size: 13px;
+            font-family: 'Nanum Gothic Coding', monospace;
+            
+        }
+
+        #submit{
+            position: absolute;
+            right: 180px;
+        }
+        #join{
+            position: absolute;
+            right: 100px;
+        }
+        .navi{
+            /* float: center; */
+            top: 50px;
+            left: 200px;
+            font: 36px Black Han Sans;
+            display: none;
+            width: 230px;
+        }
+        #content{
+            position: absolute;
+            left: 400px; 
+            width: 600px;
+            font: 13px black 'Nanum Gothic Coding';
+        }
+        
+    </style>
+</head>
+<body>
+    <section id=container>
+    <header>
+        <div class="logo">
+            <img id=menu2 src="images/002-juggler.png" width="120px" height="120px">
+                <a href="index.html" >
+            <ul>LEE EUN-HO</ul></a>
+        </div>
+        <ul class="navi" type="none">
+            <br>
+            <li id=myself>
+                <a href="myself.html">
+                <p> 자기소개</p>
+            </a>
+            </li>
+    
+            <li id=movies>
+                <a href="movies.html">
+                    <p>영화 이야기</p>
+                </a>
+            </li>
+            <li id=roadmap>
+                <a href="roadmap.html" target="_blank" width="600" height="800">
+                    <p>개발자 로드맵</p>
+                </a>
+            </li>
+            
+        </ul>
+    </header>
+    <script>
+        $("#join").click(function(){
+            window.open('join.html', '_blank', width=600, height=500); 
+        });
+
+
+        $(document).on('mouseover', '.logo', function () {
+            $('.navi').slideDown(200);
+        });
+        $(document).on('click', '.logo', function () {
+            $('.navi').slideUp(200);
+                });
+
+
+        </script>
+    </section>
+    <section id="content">
+        <h3>라이언 일병 구하기</h3>
+        <img class=pic src="images/savingprivateryan.jpg">
+        <p id=comment>남들이 보라고 할 때 안 보고 올해 처음 봤다. 굉장히 잘 만든 교과서적인 전쟁영화라 내가 지금까지 본 전쟁영화는 다 이 영화 따라쟁이였던게 아닌지 의심이 들 정도다. 저격수 캐릭터의 마지막 대사가 인상적이다. 파커 겟아웃!!!</p>
+        <hr>
+        <h3>작은 아씨들</h3>
+        <img class=pic src="images/littlewomen.jpg">
+        <p id=comment>내가 꼽는 올해의 영화;; 시얼샤 로넌은 천재 배우고 그레타 거윅은 천재 감독이다.</p>
+        <hr>
+        <h3>언더 워터</h3>
+        <img class=pic src="images/shallows.jpg">
+        <p id=comment>예상외로 너무 재밌어서 놀랬다. 상어랑 싸워서 이기려면 어떻게 해야하는지 나온다. 나는 못할 것 같다.</p>
+    </section>
+
+
+</body>
+</html>

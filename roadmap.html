@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 로드맵</title>
+    <style>
+   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic+Coding&display=swap');
+
+        body {
+  width: 960px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.fade {
+  position: relative;
+  width: 80%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 20%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', 'Nanum Gothic Coding';
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 600px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+audio{
+  width: 400px;
+  height: 60px;
+  padding: 20px 20px;
+}
+    </style>
+</head>
+<body>
+    <audio src="audio\John Williams - Star Wars Main Theme (Full).mp3" controls loop></audio>
+
+    <div class="fade"></div>
+
+    <section class="star-wars">
+
+  <div class="crawl">
+    <div class="title">
+          <h1>개발자 로드맵</h1>
+    </div>
+    <p>
+       자바 개발자 과정 수료 후 Python과 C++을 학습해본다 
+    </p>
+    <p>
+      프론트엔드에도 흥미가 있기 때문에 javascript와 css를 좀 더 심도 깊게 훈련해본다.
+    </p>
+    <p>
+      Git hub 사용법을 배워 꾸준히 결과물을 낸다.
+    </p>
+    <p>
+      3년 후엔 충분한 경험을 쌓은 백엔드 개발자가 되고, 5년 10년 후엔 사람들이 기꺼이 돈을 지불해도 아깝지 않을 서비스를 기획/개발해보고 싶다. 
+    </p>
+  </div>
+
+</section>
+    
+</body>
+</html>
